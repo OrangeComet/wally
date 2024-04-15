@@ -8,7 +8,7 @@ steps:
         "gcr.io/roblox-wally/wally-backend:$COMMIT_SHA",
         "-f",
         "wally-registry-backend/Dockerfile",
-        ".",
+        "wally-registry-backend",
       ]
 
   # Push the container image to Container Registry
