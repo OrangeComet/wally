@@ -2,14 +2,13 @@ steps:
   # Build the container image
   - name: "gcr.io/cloud-builders/docker"
     args:
-      [
-        "build",
-        "-t",
-        "gcr.io/roblox-wally/wally-backend:$COMMIT_SHA",
-        "-f",
-        "wally-registry-backend/Dockerfile",
-        "wally-registry-backend",
-      ]
+      - |
+        build
+        -t
+        gcr.io/roblox-wally/wally-backend:$COMMIT_SHA
+        -f
+        wally-registry-backend/Dockerfile
+        ./wally-registry-backend
 
   # Push the container image to Container Registry
   - name: "gcr.io/cloud-builders/docker"
@@ -37,4 +36,3 @@ timeout: 900s
 options:
   machineType: "E2_HIGHCPU_8"
   logging: CLOUD_LOGGING_ONLY
-
