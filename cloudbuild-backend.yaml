@@ -7,7 +7,7 @@ steps:
         "-t",
         "gcr.io/roblox-wally/wally-backend:$COMMIT_SHA",
         "-f",
-        "wally-registry-backend",
+        "wally-registry-backend/Dockerfile",
         ".",
       ]
 
