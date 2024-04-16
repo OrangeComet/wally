@@ -26,6 +26,8 @@ steps:
         "gcr.io/roblox-wally/wally-package-manager:$COMMIT_SHA",
         "--region",
         "us-central1",
+        "--platform",
+        "managed",
         "--port",
         "8000",
         "--command",

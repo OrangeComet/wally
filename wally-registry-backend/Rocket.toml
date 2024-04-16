@@ -8,10 +8,10 @@ port = 8000
 [debug]
 # The storage backend that the registry will use.
 # We default to local storage:
-storage = { type = "local" }
+# storage = { type = "local" }
 #
 # ...but Uplift uses Google Cloud Storage in production:
-# storage = { type = "gcs", bucket = "GCS-BUCKET-NAME" }
+storage = { type = "gcs", bucket = "oc-wally-registry-bucket" }
 
 # The authentication strategy that the registry will use.
 # In 'unauthenticated' mode, all packages are public but read only.
@@ -23,10 +23,10 @@ auth = { type = "unauthenticated" }
 # In the future, we'll support authenticating with GitHub.
 
 # The package index to use to store all of the package metadata.
-index_url = "https://github.com/UpliftGames/wally-test-index"
+#index_url = "https://github.com/UpliftGames/wally-test-index"
 #
 # Here's the production config:
-# index_url = "https://github.com/UpliftGames/wally-index"
+index_url = "https://github.com/OrangeComet/wally-index"
 
 [release]
 log_level = "normal"
